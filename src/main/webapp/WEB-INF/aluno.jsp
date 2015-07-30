@@ -13,7 +13,7 @@
 	<form method="post" action="alunocontroller.do" style="margin: auto; width: 500px;">
 	
 	<label>Nome: </label>
-	<input type="text" id="idNome" name="nome">
+	<input type="text" id="idNome" name="aluno" >
 	<br/>
 	
 	<label>Nota: </label>

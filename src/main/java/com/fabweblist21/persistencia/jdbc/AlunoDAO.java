@@ -15,7 +15,7 @@ public class AlunoDAO {
 	public void cadastrarAluno(Aluno aluno){
 		
 		//Construindo o sql para inserção
-		String sql = "INSERT INTO aluno(nome, nota) VALUE(?, ?)";
+		String sql = "INSERT INTO aluno (nome, nota) VALUES (?, ?)";
 		
 		try(PreparedStatement preparador = con.prepareStatement(sql)) {
 			
@@ -25,7 +25,7 @@ public class AlunoDAO {
 			preparador.execute();
 			
 		} catch (SQLException e) {
-			throw new RuntimeException("Erro ao cadastrar...");
+			throw new RuntimeException("Erro ao cadastrar...", e);
 		}
 	}
 
